@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-in-page</title>
+    <link rel="stylesheet" href="sign-in-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div>
+        <div id="amz-img-center">
+            <img id="amz-img" src="images/amz-sign-in-logo.png" alt="amazon_logo">
+        </div>
+
+        <div id="sign-page-center">
+            <div id="sign-in-1">
+                <p id="sign-page-p">Sign in</p>
+                <p id="sign-page-p2">Email or mobile phone number</p>
+                <input id="sign-page-input" type="text">
+                <button id="sign-page-btn-1">Continue</button>
+                <p id="sign-page-p3">By continuing, you agree to Amazon's <span class="sign-page-span-1">Conditions
+                        of</span></p>
+                <p id="sign-page-p4"><span class="sign-page-span-1">Use</span> and <span
+                        class="sign-page-span-1">Privacy Notice.</span></p>
+                <p class="sign-page-p5" onclick="needHelp()"><i class="fas fa-chevron-down icon-down sign-down"></i>Need help?</p>
+                <div id="need-help-content">
+                    <p class="sign-page-p6">Forgot your password?</p>
+                    <p class="sign-page-p6">Other issues with Sign-In</p>
+                </div>
+            </div>
+        </div>
+
+        <p id="sign-page-p7">New to Amazon?</p>
+        <a style="text-decoration: none;" href="new-sign-page.html">
+            <div id="sign-page-button-2">
+                <button id="sign-page-btn-2">Create your Amazon account</button>
+            </div>
+        </a>
+        <div id="sign-page-border"></div>
+    </div>
+    <div id="sign-page-condition">
+        <a class="sign-page-contain">Condition of Use</a>
+        <a class="sign-page-contain">Privacy Notice</a>
+        <a class="sign-page-contain">Help</a>
+    </div>
+    <p id="sign-page-copyright">© 1996-2025, Amazon.com, Inc. or its affiliates</p>
+    <script src="sign-in-page.js"></script>
+</body>
+
+</html>

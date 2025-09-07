@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#amz-img {
+    height: 43px;
+    width: 115px;
+}
+
+#amz-img-center {
+    margin-top: 0.50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#new-sign-page{
+   height: 630px;
+   width: 350px;
+   border-radius: 12px;
+   border: 1px solid lightgray;
+}
+
+#new-sign-page-center{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#new-sign-page-p1{
+    font-size: 27px;
+    padding-top: 15px;
+    padding-left: 23px;
+    font-weight: 500;
+    font-family: "Poppins",sans-serif;
+}
+
+.new-sign-page-p2{
+    font-size: 13px;
+    padding-left: 23px;
+    font-weight: bold;
+    margin-top: 0.50rem;
+    font-family: "Poppins",sans-serif;
+}
+
+.new-sign-page-input-1{
+    height: 32px;
+    width: 300px;
+    border-radius: 5px;
+    border: 0.1px solid rgb(185, 174, 174);
+    text-decoration: none;
+    box-shadow: 0.2px 0 0 0.2px lightgray;
+    margin-left: 23px;
+    margin-top: 0.20rem;
+}
+
+.new-sign-page-input-1::placeholder{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.p-3{
+    margin-top: 0.80rem;
+}
+
+#new-sign-page-p4{
+    font-size: 12px;
+    margin-left: 23px;
+    margin-top: 0.50rem;
+    font-family: "Poppins",sans-serif;
+}
+
+
+#sign-page-btn-1 {
+    height: 30px;
+    width: 300px;
+    border-radius: 25px;
+    color: black;
+    border: none;
+    margin-left: 1.5rem;
+    margin-top: 0.80rem;
+    background-color: #FFD814;
+}
+
+#sign-page-btn-1:hover{
+    cursor: pointer;
+    background-color: #f1cf21;
+}
+
+
+#sign-page-p3 {
+    margin-left: 1.5rem;
+    margin-top: 1.8rem;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.sign-page-span-1 {
+    color: rgb(19, 136, 172);
+    text-decoration: underline;
+}
+
+.sign-page-span-1:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+#sign-page-p4 {
+    margin-left: 1.5rem;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+#new-sign-page-border-1{
+    border: 0.1px solid rgb(223, 218, 218);
+    margin: 2rem 1rem;
+}
+
+#sign-in-page-p5{
+    margin-top: 1rem;
+    margin-left: 23px;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+}
+
+#sign-in-page-p6{
+    margin-top: 0.10rem;
+    margin-left: 23px;
+    font-weight: bold;
+    color: rgb(49, 116, 134);
+    font-size: 13.5px;
+    font-family: "Poppins", sans-serif;
+}
+
+#sign-in-page-p6:hover{
+    color: rgb(231, 75, 75);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#new-sign-page-border-2{
+    border: 0.1px solid rgb(223, 218, 218);
+    margin: 0.80rem 1rem;
+}
+
+#sign-in-page-p7{
+    margin-top: 1.5rem;
+    font-size: 13.5px;
+    margin-left: 23px;
+    font-family: "Poppins", sans-serif;
+}
+
+#new-sign-page-span-1{
+    color: rgb(49, 116, 134);
+}
+
+#new-sign-page-span-1:hover{
+    color: rgb(231, 75, 75);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#new-sign-page-border-3{
+    border: 0.1px solid lightgray;
+    margin: 1rem 1rem;
+}
+
+#sign-page-condition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-page-contain {
+    color: rgb(7, 104, 136);
+    margin-top: 1rem;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 1.2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.sign-page-contain:hover {
+    color: brown;
+    text-decoration: underline;
+}
+
+#sign-page-copyright {
+    margin-top: 0.70rem;
+    color: rgb(48, 43, 43);
+    text-align: center;
+    font-size: 10.4px;
+    margin-left: 1rem;
+    letter-spacing: 0.3px;
+    font-family: "Poppins", sans-serif;
+} 
+
+
+

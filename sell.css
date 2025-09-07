@@ -1,0 +1,1176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* box-1 */
+
+.nav-bar {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #0F1111;
+    /* position: fixed; */
+}
+
+.nav-logo {
+    background-image: url("images/amazon_logo.png");
+    background-size: cover;
+    margin-right: 1.5rem;
+    height: 50px;
+    width: 100px;
+}
+
+.nav-logo:hover {
+    border: 1px solid white;
+    padding: 8px 8px;
+
+}
+
+/* box-2 */
+
+.nav-shop {
+    color: white;
+    margin-right: 4rem;
+}
+
+.nav-shop:hover {
+    border: 1px solid white;
+    padding: 8px 8px;
+
+}
+
+.add-first {
+    color: #cccccc;
+    font-size: 0.85rem;
+    font-family: sans-serif;
+}
+
+.add-second {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.icon-1 {
+    margin-right: 5px;
+}
+
+/* box-3 */
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3rem;
+}
+
+.nav-search:hover {
+    border: 2px solid #FEBD68;
+    border-radius: 4px;
+}
+
+
+.search {
+    height: 40px;
+    width: 50px;
+    border: none;
+    text-align: center;
+    background-color: #F3F3F3;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+}
+
+.amazon-search {
+    height: 40px;
+    width: 600px;
+    border: none;
+}
+
+.amazon-search::placeholder {
+    font-size: 1rem;
+    color: #757587;
+}
+
+
+.search-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0F1111;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: #FEBD68;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.icon-2 {
+    font-size: 1.2rem;
+
+}
+
+/* box-4 */
+
+.nav-sign {
+    color: white;
+    font-family: sans-serif;
+    margin-right: 3rem;
+}
+
+.nav-sign:hover {
+    border: 1px solid white;
+    padding: 8px 8px;
+
+}
+
+.span-1 {
+    font-size: 12px;
+}
+
+.span-2 {
+    font-size: 13px;
+    font-weight: 550;
+}
+
+/* box-5 */
+
+.nav-orders {
+    color: white;
+    font-family: sans-serif;
+    margin-right: 2rem;
+}
+
+.nav-orders:hover {
+    border: 1px solid white;
+    padding: 8px 8px;
+
+}
+
+.span-3 {
+    font-size: 12px;
+}
+
+.span-4 {
+    font-size: 13px;
+    font-weight: 550;
+}
+
+/* box-6 */
+
+.nav-cart {
+    display: flex;
+    color: white;
+}
+
+.nav-cart:hover {
+    border: 1px solid white;
+    padding: 8px 8px;
+}
+
+.icon-3 {
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+.span-5 {
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.para-1 {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+
+/* nav-brother */
+
+.nav-brother{
+    height: 40px;
+    background-color: #232F3E;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu{
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 0.85rem;
+    margin: 5px;
+}
+
+.icon-4{
+    font-size: 17px;
+    margin: 0 7px;
+}
+
+.nav-a:hover{
+    border: 1px solid white;
+    margin: 5px 0 6px 0;
+    padding: 8px 9px;
+}
+
+.nav-a{
+    margin: 0 10px;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+/* sell section */
+
+.sell-card-1{
+    display: flex;
+    align-items: center;
+    background-color: #F5F3EF;
+    height:100px;
+    /* position: fixed; */
+    /* width: 100%; */
+    margin-top: 14px;
+    margin-left: 8px;
+    margin-right: 7px;
+    border-radius: 5px;
+}
+
+.sell-card-2{
+    margin-top: 8px;
+}
+
+
+.para-2{
+    font-family: "Poppins",sans-serif;
+    color:#161E2D;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin: 0 3.5rem;
+}
+
+.para-3{
+    font-family: "Poppins",sans-serif;
+    font-size: 1rem;
+    color: #161E2D;
+    margin-left: 8rem;
+
+}
+
+
+
+.span-6{
+    font-family: "Poppins",sans-serif;
+    color:#161E2D;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.sell-anchor{
+    color: #161E2D;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-family: "Poppins",sans-serif;
+}
+
+.sell-btn-1{
+    height: 45px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #161E2D;
+    border: none;
+    margin-left: 12rem;
+    border-radius: 25px;
+    background-color: #FF6200;
+    box-shadow: 1px 1px 1px 1px #cccccc;
+}
+
+.sell-btn-1:hover{
+    transform:scaleX(1.1);
+    transition: ease-in 0.1s;
+    width: 98px;
+}
+
+.sell-container{
+    height: 430px;
+    margin-left: 10px;
+    margin-right: 7px;
+    background-color: #F5F3EF;
+    border-radius: 4px;
+}
+
+
+.sell-card-3{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sell-image-item{
+    height: 400px;
+    width: 493px;
+}
+
+.para-4{
+    font-size: 75px;
+    color:#161E2D;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    
+}
+
+.para-5{
+    margin-top: 1.6rem;
+    margin-left:3.2rem ;
+}
+
+.para-6{
+    font-size: 75px;
+    margin-left: 3.2rem;
+}
+.sell-btn-2{
+    height: 75px;
+    width: 175px;
+    border: none;
+    border-radius: 50px;
+    background-color: #FF6200;
+    color: #161E2D;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    margin-left: 3.2rem;
+    margin-top: 2rem;
+}
+
+.sell-btn-2:hover{
+    transform: scaleX(1.1);
+    transition: ease-in 0.1s;
+}
+
+.sell-card-account{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.para-7{
+    color: #161E2D;
+    font-family: "Poppins",sans-serif;
+    margin: 0 30px;
+    font-size: 15px;
+   
+}
+
+.sell-card-contain{
+    margin-top: 2rem;
+}
+
+.sell-card-contain:hover{
+    transform: scaleX(1.1);
+    transition: ease-in 0.1s;
+}
+
+.span-7{
+   font-weight: bolder;
+}
+
+
+/* sell discount */
+
+.sell-incentives-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sell-discount{
+    font-size: 25px;
+    color: #161E2D;
+    text-align: center;
+    margin-top: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+   font-family: "Poppins",sans-serif;
+}
+
+.span-8{
+    font-size: 1.6rem;
+ }
+
+.sell-anchor-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6rem;
+}
+
+.sell-new-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 6rem;
+    font-weight: 600;
+    font-size: 15px;
+    width: 212px;
+    height: 32px;
+    border-radius: 25px;
+    background-color: #49850F;
+   font-family: "Poppins",sans-serif;
+
+}
+
+.icon-5{
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+.sell-image-item1{
+    height: 480px;
+    width: 551px;
+    margin-top: 0.20rem;
+}
+
+.para-8{
+    font-size: 48px;
+    color: #232F3E;
+    font-weight: bolder;
+    font-family: "Poppins",sans-serif;
+    line-height: 1.2;
+}
+
+.para-15{
+    margin-top: 1rem;
+}
+
+.para-9{
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.para-10{
+    margin-top: 1rem;
+}
+
+.sell-incentives-card{
+    height: 230px;
+    width:700px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    background-color: #F2F6E1;
+}
+
+.para-11{
+    line-height: 1.8;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Poppins",sans-serif;
+}
+
+.icon-6{
+    margin-top: 1.6rem;
+    margin-right: 12px;
+    font-size: 15px;
+
+}
+
+.span-9{
+    color: #232F3E;
+    font-weight: bold;
+}
+
+.para-12{
+    margin-left: 4.3rem;
+    font-size: 14px;
+    font-family: "Poppins",sans-serif;
+}
+
+.icon-7{
+    margin-right: 12px;
+    font-size: 15px;   
+}
+
+.para-13{
+    margin-top: 0.45rem;
+    margin-left: 2.8rem;
+    line-height: 1.8;
+    font-size: 14px;
+    font-family: "Poppins",sans-serif;
+}
+
+.para-14{
+    margin-left: 4.3rem;
+    font-size: 14px;
+    font-family: "Poppins",sans-serif;
+}
+
+.sell-link-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none;
+    margin-top: 1rem;
+    color: #232F3E;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    font-size: 1rem;
+}
+
+.icon-8{
+    font-size: 1rem;
+    transform: rotate(40deg);
+    margin-left: 1rem;
+}
+
+.icon-8:hover{
+    color: rgb(117, 206, 236);
+    transform: scale(1.1);
+    transition: ease-in 0.5s;
+}
+
+
+/* sell-section-3 */
+
+
+.sell-section-3{
+    height: 354px;
+    margin: 5rem 8px;
+    color: white;
+    font-family: "Poppins",sans-serif;
+    background-color: #161E2D;
+}
+
+.sell-seller-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.para-16{
+    font-size: 50px;
+    margin-top: 5.5rem;
+    font-weight: bold;
+}
+
+
+/* Estimate your FBA costs */
+
+.sell-section-4{
+  height: 500px;
+  border-radius: 25px;
+  background-color: #F5F3EF;
+  margin:  0  80px;
+}
+
+.sell-section-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.h3-section-4{
+    font-family: "Poppins",sans-serif;
+    color: #232F3E;
+    display: inline-block;
+    margin-left: 4.5rem;
+    margin-top: 2.5rem;
+}
+
+
+
+
+/* .sell-section-Estimate{
+    margin-top: 1.5rem;
+} */
+
+.sell-section-p{
+    color:#232F3E;
+    font-size:45px;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: "Poppins",sans-serif;
+}
+
+.span-10{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sell-section-p-2{
+    font-size: 15px;
+    color:#232F3E;
+    margin-top: 1rem;
+    font-family: "Poppins",sans-serif;
+}
+
+.p-3{
+    margin-top: 0.10rem;
+}
+
+.sell-section-p-4{
+    color:#232F3E;
+    margin-top: 1rem;
+    font-size: 13px;
+    margin-left: 1.5rem;
+    font-family: "Poppins",sans-serif;
+}
+
+.p-5{
+    margin-top: 0.10rem;
+}
+
+.sell-section-p-6{
+    color:#232F3E;
+    font-size: 14.5px;
+    margin-top: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Poppins",sans-serif;
+}
+
+
+.sell-img-3{
+    height: 420px;
+    width: 440px;
+}
+
+/* sell-section-started */
+
+/* box-1 */
+
+.sell-section-started{
+    height: 1350px;
+    box-shadow: 0px 0px 10px rgb(179, 169, 169);
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    background-color: #ffffff;
+    margin:  6rem  80px;
+}
+
+.sell-started-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sell-heading-1{
+    color:#232F3E;
+    font-size: 45px;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+}
+
+.sell-para-1{
+    font-size: 18.5px;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    color: #232F3E;
+    font-family: "Poppins",sans-serif;
+}
+
+.sell-para-2{
+    margin-top: 0.85rem;
+    margin-left: 8rem;
+    font-size: 13px;
+    color:#232F3E;
+    font-family: "Poppins",sans-serif;
+}
+
+.sell-para-3{
+    margin-top: 0.10rem;
+}
+
+.sell-ul-list{
+    font-size: 13px;
+    color:#232F3E;
+    list-style-type: disc;
+    margin-top: 0.70rem;
+    margin-left: 10.5rem;
+    font-family: "Poppins",sans-serif; 
+}
+
+.span-11{
+    color: #6c7778;
+    font-weight: bold;
+}
+
+.sell-para-4{
+    font-size: 13px;
+    color:#232F3E;
+    font-family: "Poppins",sans-serif; 
+}
+
+.sell-list{
+    margin-top: 1rem;
+}
+
+.sell-para-5{
+    margin-top: 2rem;
+    margin-left: 8rem;
+    font-size: 13px;
+    color:#232F3E;
+    font-family: "Poppins",sans-serif; 
+}
+
+.sell-para-6{
+    margin-top: 1.5rem;
+    margin-left: 8rem;
+    font-size: 13px;
+    color:#232F3E;
+    font-family: "Poppins",sans-serif; 
+}
+
+.sell-para-7{
+    margin-top: 0.10rem;
+}
+
+.span-12{
+    text-decoration: underline;
+}
+
+.span-12:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: ease-in-out ;
+    font-weight: bold;
+    color: #6c7778;
+    cursor: pointer;
+}
+
+/* box-2 */
+
+.sell-amazon-account{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+ 
+
+.sell-para-8{
+    font-size: 13px;
+    color:#232F3E;
+    font-weight: bold;
+    font-size: 14.5px;
+    margin-left: 8rem;
+    margin-top: 0.50rem;
+    cursor: pointer;
+    font-family: "Poppins",sans-serif; 
+}
+
+.sell-para-9{
+    margin-top: 3rem;
+}
+
+.sell-para-10{
+    font-size: 13px;
+    color:#232F3E;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    font-family: "Poppins",sans-serif; 
+}
+
+.sell-para-11{
+   margin-top: 0.30rem; 
+}
+
+.sell-para-12{
+    margin-top: 0.30rem; 
+ }
+
+ .span-13{
+    text-decoration: underline;
+ }
+
+ .span-13:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: ease-in-out ;
+    font-weight: bold;
+    color: #6c7778;
+    cursor: pointer;
+ }
+
+ .sell-para-13{
+    font-size: 13px;
+    color:#232F3E;
+    margin-left: 8rem;
+    margin-top: 1.3rem;
+    font-family: "Poppins",sans-serif; 
+ }
+
+ .sell-list-2{
+    line-height: 1.2;
+    font-size: 13px;
+    color:#232F3E;
+    margin-left: 10.5rem;
+    margin-top: 1.3rem;
+    font-family: "Poppins",sans-serif; 
+ }
+
+ .sell-para-14{
+    font-size: 13px;
+    color:#232F3E;
+    margin-left: 8rem;
+    margin-top: 2rem;
+    font-family: "Poppins",sans-serif;  
+ }
+
+ .sell-para-15{
+    font-size: 13px;
+    color:#232F3E;
+    margin-left: 8rem;
+    font-family: "Poppins",sans-serif;
+ }
+
+ .sell-para-16{
+    font-size: 15px;
+    color:#232F3E;
+    font-weight: bold;
+    margin-top: 0.70rem;
+    margin-left: 8rem;
+    cursor: pointer;
+    font-family: "Poppins",sans-serif;
+ }
+
+ /* box-3 */
+
+ .start-selling{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+
+ .sell-para-17{
+    font-size: 13px;
+    color:#232F3E;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    font-family: "Poppins",sans-serif;  
+ }
+
+ .sell-para-18{
+    margin-top: 0.10rem;
+ }
+
+ .sell-para-19{
+    margin-top: 2rem;
+    font-size: 13px;
+    color:#232F3E;
+    margin-left: 8rem;
+    font-family: "Poppins",sans-serif;  
+ }
+
+ .sell-para-20{
+    margin-top: 0.10rem;
+ }
+
+ .sell-para-21{
+    margin-top: 1rem;
+    font-size: 15px;
+    color:#232F3E;
+    font-weight: bold;
+    margin-left: 8rem;
+    cursor: pointer;
+    font-family: "Poppins",sans-serif;  
+ }
+
+ /* Frequently Asked Questions */
+
+ .sell-question-heading{
+    margin-top: 3rem;
+    font-size: 50px;
+    color: #161E2D;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;  
+    text-align: center;
+ }
+
+ .sell-line-1{
+    border: 0.1px solid lightgray;
+    margin: 0 13rem;
+    margin-top: 4rem;
+    cursor: pointer;
+ }
+
+  .sell-question-1{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+ } 
+
+ .sell-question-2{
+    margin-top: 15px;
+    font-size: 14.5px;
+    color: #161E2D;
+    cursor: pointer;
+    font-family: "Poppins",sans-serif;
+ }
+
+ .sell-question-3{
+    font-size: 2rem;
+    margin-top: 14.5px;
+    color: #161E2D;
+    cursor: pointer;
+    margin-left: 13rem;
+ }
+
+ .sell-line-2{
+    border: 0.1px solid lightgray;
+    margin: 0 13rem;
+    cursor: pointer;
+    margin-top: 1rem;
+ }
+
+ .sell-question-4{
+    margin-left: 9rem;
+ }
+
+ .sell-question-5{
+    margin-left: 14.3rem;
+ }
+ 
+ .sell-question-6{
+    margin-left: 4.8rem;
+ }
+
+ .sell-question-7{
+    margin-left: 5.1rem;
+ }
+
+
+ /* Start selling with Amazon */
+
+ .sell-section-last{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .selling-start{
+    height: 428px;
+    margin: 7rem  80px;
+    background-color: #F5F3EF;
+    border-radius: 25px;
+ }
+
+ .sell-amazon-1{
+    font-size: 60px;
+    font-weight: bold;
+    display: inline-block;
+    color: #232F3E;
+    line-height: 1;
+    margin-top: 5rem;
+    font-family: "Poppins",sans-serif;
+ }
+
+ .sell-amazon-2{
+    font-size: 60px;
+    font-weight: bold;
+    color: #232F3E;
+    font-family: "Poppins",sans-serif;
+ }
+
+ .sell-amazon-3{
+    margin-top: 0.50rem;
+    font-size: 18px;
+    color: #232F3E;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+ }
+
+ .sell-amazon-4{
+    margin-top: 0.10rem;
+ }
+
+ .sell-btn-3{
+    margin-left: 0px;
+ }
+
+ .sell-image-7{
+    border-radius: 25px;
+ }
+
+ .sell-sec-flex{
+    margin-left: 5rem;
+ }
+
+ 
+ 
+/* Sign-in page */
+
+.sign-page {
+    height: 150px;
+    text-align: center;
+    /* margin-top: 1rem; */
+    border: 1.8px solid #E2E7E6;
+    width: 100%;
+
+}
+
+.sign-h2 {
+    margin-top: 2rem;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+.btn {
+    height: 2rem;
+    width: 14rem;
+    background-color: #f7ca00;
+    margin: 5px 0;
+    font-family: sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: ease 2s;
+    text-transform:lowercase;
+    text-shadow: 1.5px 1.5px  white;
+    font-weight: 600;
+}
+
+.f-span-7 {
+    text-decoration: underline;
+    font-size: 0.70rem;
+    color: #007185;
+    font-family: sans-serif;
+}
+
+.span-7:hover{
+    color: brown;
+    cursor: pointer;
+}
+
+.f-para-3 {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 0.75rem;
+}
+
+/* Footer */
+
+/* footer-1 */
+
+
+.footer-panel {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: #37475a;
+}
+
+
+.f-para-4 {
+    font-family: sans-serif;
+    color: white;
+    font-size: 0.85rem;
+}
+
+
+.footer-panel a{
+    text-decoration: none;
+}
+
+
+.footer-panel:hover{
+ background-color:#485769;
+}
+
+/* footer-2 */
+
+.foot-pan12 {
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #222f3d;
+
+}
+
+ ul a {
+   display: block; 
+   font-size: 0.85rem;
+   color: #dddddd;
+   font-family: sans-serif;
+   margin-top: 10px;
+} 
+
+ul{
+   margin-top: 50px;
+
+}
+
+.foot-para{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: white;
+}
+
+.f-para-5{
+   font-size: 0.85rem;
+   color: #dddddd;
+   font-family: sans-serif;
+}
+
+
+/* footer-amazon-logo */
+
+.amazon-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222f3d;
+    height: 70px;
+    border: 1.5px solid white;
+}
+
+.a-logo{
+    height: 50px;
+    width: 100px;
+}
+
+/* footer-amazon-privacy  */
+
+.amazon-privacy{
+    background-color: #0F1111;
+    height: 80px;
+    font-size: 0.7rem;
+    padding: 25px;
+    border: none;
+}
+
+.f-para-6{
+    font-family: sans-serif;
+    margin-top: 4px;
+    color: white;
+    text-align: center;   
+}
+
+ 
+ 
+
+
