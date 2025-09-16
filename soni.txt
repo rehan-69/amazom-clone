@@ -1,0 +1,362 @@
+'''1a)import datetime
+name=input("Hello please enter your name")
+print("Hello!"+name)
+age=int(input("Enter your age"))
+year_now=datetime.datetime.now()
+print("You will turn 100 in"+str(int(100-age)+int(year_now.year)))
+'''
+
+'''
+1b)n=int(input("Enter a number"))
+if n%2==0:
+    print("Even")
+else:
+    print("Odd")
+'''
+
+'''
+1c)n=int(input("Enter a your CGPA between 1 to 10"))
+if n>=9 and n<=10:
+    print("O grade")
+elif n>=8 and n<=9:
+    print("A+ grade")
+elif n>=7 and n<=8:
+    print("A grade")
+elif n>=6 and n<=7:
+    print("B+ grade")
+elif n>=5 and n<=6:
+    print("B grade")
+elif n>=4 and n<=5:
+    print("C grade")
+elif n>=3 and n<=4:
+    print("Pass")
+elif n>=2 and n<=3:
+    print("Fail")
+else:
+    print("Error:please enter correct choice")
+    '''
+
+'''2a)n=int(input("Enter a number"))
+a=0
+b=1
+c=0
+for i in range(1,n):
+    print(a)
+    c=a+b
+    a=b
+    b=c
+print(a)
+'''
+
+'''2b)n=int(input("Enter a number"))
+s=0
+while n!=0:
+    r=n%10
+    s=s+r
+    n=n//10
+print(s)
+'''
+
+'''2c)n=int(input("Enter a number"))
+s=0
+for i in range(1,n+1):
+    s=s+i
+print(s)
+'''
+
+'''practice question prime number
+n=int(input("Enter a number"))
+if n>1:
+    for i in range(2,n):
+        if n%i==0:
+            print("Not prime")
+            break
+    else:
+        print("prime")
+else:
+    print("Not prime")
+'''
+
+'''asterisk 
+n=int(input("Enter a number"))
+i=0
+for i in range(6):
+    for j in range(i):
+        print("*",end="")
+    print()
+    '''
+'''
+3a)import numpy as np
+arr=np.array([1,2,3,4,5])
+
+#basic operation
+print("Add",arr+5)
+print("sub",arr-5)
+print("mul",arr*5)
+print("div",arr/5)
+
+#basic indexing
+print(arr[0])
+print(arr[-1])
+print(arr[[0,2,4]])
+
+#basic slicing
+print(arr[1:])
+print(arr[:3])
+print(arr[1:4])
+print(arr[::2])
+'''
+
+'''
+3b)import numpy as np
+arr1=np.array([1,2,3])
+arr2=np.array([4,5,6])
+
+print("Add",arr1+arr2)
+print("sub",arr1-arr2)
+print("mul",arr1*arr2)
+print("div",arr1/arr2)
+print("scalar mul",arr1*5)
+print("aggregate function")
+print("min",np.min(arr1))
+print("max",np.max(arr1))
+print("sum",np.sum(arr1))
+print("mean",np.mean(arr1))
+print("apply function")
+print("sqrt",np.sqrt(arr1))
+'''
+
+'''3c)import numpy as np
+arr=np.array([1,2,3])
+
+print("original array",arr)
+alias_arr=arr
+print("alising",alias_arr)
+cpy_arr=arr.copy()
+print("copying array",cpy_arr)
+arr[0]=4
+print("modifying array",arr)
+'''
+
+'''
+4a)import numpy as np
+arr=np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+print("basic indexing",arr[0,1])
+print("slicing",arr[0:2,:])
+row=[0,1]
+cols=[1,0]
+print("advanced indexing:",arr[row,cols])
+print("boolean indexing:",arr[arr>6])
+'''
+
+'''4b)import numpy as np
+arr1=np.array([1,2,3])
+arr2=np.array([[4,5,6],
+              [7,8,9]])
+arr3=np.array([[[10,11,12],
+                [13,14,15],
+                [16,17,18]]])
+print(arr1)
+print(arr2)
+print(arr3)
+
+print("number of dimension",arr1.ndim)
+print("size in each dimension",arr1.shape)
+print("total no. of size",arr1.size)
+print("data type of element",arr1.dtype)
+'''
+
+'''
+5a)def armstrong(n):
+    s=0
+    temp=n
+    while n!=0:
+        r=n%10
+        s=s+r*r*r
+        n=n//10
+    if temp==s:
+         print("armstrong number")
+    else:
+        print("Not armstrong number")
+    
+
+
+def palindrome(n):
+    s=0
+    temp=n
+    while n!=0:
+        r=n%10
+        s=r+s*10
+        n=n//10
+    if temp==s:
+        print("palindrome number")
+    else:
+        print("Not palindrome number")
+    
+
+n=int(input("Enter a number"))
+armstrong(n)
+palindrome(n)
+'''
+'''
+5b)n=int(input("Enter a number"))
+def fact(n):
+    if n==0:
+        return 1
+    else:
+        return n*fact(n-1)
+print(fact(n))
+'''
+
+'''simple factorial 
+n=int(input("Enter a number"))
+fact=1
+for i in range(1,n+1):
+    fact=fact*i
+print(fact)
+'''
+'''
+5c)start_with=lambda s,ch:s.startswith(ch)
+text=input("Enter a string")
+char=input("Enter a character")
+print("start with",char+":",start_with(text,char))
+'''
+'''
+6a)text=input("Enter a string")
+char=len(text.replace("" ,""))
+word=len(text.split())
+print("characters:",char)
+print("word:",word)
+'''
+'''
+6b)def area_square(side):
+    return side * side
+
+def area_circle(r):
+    return 3.14 * r * r
+
+def pointyshapevolume(x,y,squareBase):
+    if squareBase:
+        area_base = area_square(x)
+    else:
+        area_base = area_circle(x)
+    volume =(1/3)*area_base*y
+    return volume
+print("Volume (square Base)",pointyshapevolume(4,9,True))
+print("Volume (circular Base)",pointyshapevolume(4,9,False))
+'''
+'''
+7a)list1=input("Enter elements in list1:").split(",")
+list2=input("Enter elements in list2:").split(",")
+
+def checkcommmon(l1,l2):
+    return any(item in l1 for item in l2)
+print("check common element",checkcommmon(list1,list2))
+'''
+'''
+7b)marks={"rehan":45,"sunny":20,"prince":80}
+asc=dict(sorted(marks.items(),key=lambda item:item[1]))
+print("Ascending",asc)
+dsc=dict(sorted(marks.items(),key=lambda item:item[1],reverse=True))
+print("Decending",dsc)
+'''
+
+'''8a)def area_circle(r):
+    return 3.14 * r * r
+
+def circumference(r):
+    return 2 * 3.14 *r
+
+r=int(input("Enter a number"))
+print(area_circle(r))
+print(circumference(r))
+'''
+'''
+8b)f=open("p1","w")
+f.write("Hello world!")
+
+print("file is closed",f.closed)
+f.close()
+print("file is closed",f.closed)
+
+f=open("p1","r")
+print("read:",f.read())
+f.close()
+
+f=open("p1","r")
+f.seek(15)
+print("file tell",f.tell())
+
+print("readline:",f.readline())
+'''
+
+'''
+8c)def read_last_n_lines(filename,n):
+    with open(filename,"r") as f:
+        lines=f.readlines()
+        return lines[-n:]
+filename="p1"
+n=int(input("Enter the number of n lines to read"))
+
+last_line=read_last_n_lines(filename,n)
+print("\nLast",n,"lines")
+for line in last_line:
+    print(line.strip())
+'''
+
+'''9a)import re
+with open("p1","r") as f:
+    text=f.read()
+word=input("Enter word for searching")
+matches=re.findall(rf"\b{re.escape(word)}\b",text,re.IGNORECASE)
+print(f"occurrences of {word}",len(matches))
+'''
+
+'''9b)import re
+f=open("p1.html","r")
+content=f.read()
+f.close()
+print("Matches for c",re.findall(r'c',content))
+'''
+'''
+10a)import datetime
+d1=datetime.datetime(2004,1,1)
+d2=datetime.datetime(2005,12,1)
+if d1<d2:
+    print("d1 is earlier")
+elif d1>d2:
+    print("d2 is later")
+else:
+    print("d1 is the same d2")
+'''
+'''
+10b)import time
+st=time.time()
+for i in range(3):
+    time.sleep(1)
+    print("cleanliness is next to godliness")
+et=time.time()
+tt=et-st
+print("Total runtime taken to executes program",tt,"seconds")
+'''
+'''
+10c)
+import calendar
+y=2024
+m=9
+d=1
+w= calendar.weekday(y,m,d)
+print("Weekday:",w)
+'''
+
+
+'''#practice question
+import re
+text = "Hello 123, this_is a test.\nNextLine 456!"
+digit=re.findall(r"\d",text)
+print("Digits:",digit)
+digit=re.findall(r"\w",text)
+print("Woed:",digit)
+digit=re.findall(r"\s",text)
+print("space:",digit)'''
