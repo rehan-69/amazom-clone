@@ -1,0 +1,362 @@
+	Practical 1(a)
+
+object Users extends App{
+var user:String ="user1"
+println("Welcome"+user)
+user="user2"
+println("Welcome"+user)
+}
+
+practical 1(b)
+
+object Statictics extends App {
+
+def mean(numbers:List[Double]):Double = {
+numbers.sum/numbers.length
+}
+
+def median(numbers:List[Double]): Double = {
+val sorted = numbers.sorted
+val size = sorted.size
+if(size % 2 == 0){
+(sorted(size/2-1) + sorted(size/2))/2
+}else{
+sorted(size/2)
+}
+}
+
+def mode(numbers:List[Double]): List[Double] = {
+val frequencyMap = numbers.groupBy(identity).mapValues(_.size)
+val maxFrequency = frequencyMap.values.max
+frequencyMap.filter(_._2 == maxFrequency).keys.toList
+}
+
+val data = List(1.0,2.0,3.0,3.0,4.0,5.0,6.0,6.0,6.0)
+println("Data:" + data)
+println("Mean:" + mean(data))
+println("Median:" + median(data))
+println("Mode:" + mode(data))
+}
+
+practical 1(c)
+
+import scala.util.Random
+import math.sqrt
+
+object Statictics extends App {
+
+def mean(numbers:List[Double]): Double = {
+numbers.sum/numbers.length
+}
+
+def variance(numbers:List[Double]): Double = {
+val m = mean(numbers)
+numbers.map(x=>math.pow(x-m,2)).sum/numbers.length
+}
+
+def standardDeviation(numbers:List[Double]): Double = {
+sqrt(variance(numbers))
+}
+
+val randomData = List.fill(10)(Random.nextInt(100)+1).map(_.toDouble)
+println("RandomData"+randomData)
+val varvalue = variance(randomData)
+val stdDevvalue = standardDeviation(randomData)
+println("Variance:"+varvalue)
+println("standardDeviation"+stdDevvalue)
+}
+
+practical 2(a)
+
+import breeze.linalg._
+import breeze.stats._
+
+object BreezExample extends App {
+
+val vector1 = DenseVector(1.0,2.0,3.0,4.0,5.0)
+val s = sum(vector1)
+val m = mean(vector1)
+
+val vector2 = DenseVector(5.0,4.0,3.0,2.0,1.0)
+val dotproduct  = vector1 dot vector2
+val addvect = vector1 + vector2
+
+println("Vector1:"+vector1)
+println("Vector2:"+vector2)
+
+println("Sum of vector:"+s)
+println("Mean of vector:"+m)
+
+println("Product of vector1 and vector2:"+dotproduct)
+println("Addition of vector1 and vector2:"+addvect)
+}
+
+practical 2(b)
+
+import breeze.linalg._
+
+object BreezeMatrixExample extends App {
+scala.util.Random.setSeed(42)
+val matrix: DenseMatrix[Double] = DenseMatrix.rand(3,3)
+val transposed : DenseMatrix[Double] = matrix.t
+val determinant: Double = det(matrix)
+println("Original Matrix"+matrix)
+println("Transpose of the matrix:"+transposed)
+println("Determinant of the matrix:"+determinant)
+}
+
+practical 2(c)
+
+import breeze.linalg._
+
+object SubMatrixExample extends App {
+val matrix = DenseMatrix(
+(1.0,2.0,3.0,4.0),
+(5.0,6.0,7.0,8.0),
+(9.0,10.0,11.0,12.0),
+(13.0,14.0,15.0,16.0)
+)
+
+println("Original Matrix:"+matrix)
+
+val submatrix = matrix(1 to 2,0 to 2)
+println("Submatrix(row 1 to 2,column 0 to 2):" +submatrix)
+
+val rowsum = sum(submatrix(*,::))
+println("Rows sum:"+rowsum)
+
+val colsum = sum(submatrix(::,*))
+println("Column sums:"+colsum)
+}
+
+practical 2(d)
+
+import breeze.linalg._
+
+object MatrixExample extends App {
+val matrix1 = DenseMatrix(
+(1.0,2.0,3.0,4.0),
+(5.0,6.0,7.0,8.0),
+(9.0,10.0,11.0,12.0)
+)
+
+val matrix2 = DenseMatrix(
+(13.0,14.0,15.0,16.0),
+(17.0,18.0,19.0,20.0),
+(21.0,22.0,23.0,24.0)
+)
+
+val add = matrix1 + matrix2
+val sub = matrix1 - matrix2
+val mul = matrix1 *:* matrix2
+val div = matrix1 /:/ matrix2
+
+println("Matrix1:\n"+matrix1)
+println("Matrix2:\n"+matrix2)
+println("Element wise addition of matrix:"+add)
+println("Element wise subtraction of matrix:+"+sub)
+println("Element wise multiplication of matrix:"+mul)
+println("Element wise division of matrix:"+div)
+}
+
+practical 4(a)
+
+//4a)WAP  to tokenize and count the frequency of word in a text file
+
+object wordfrequencyCounter extends App {
+  val text =
+    """ Hello world! This is scala
+      |Scala is great. Hello again, world.
+      |""".stripMargin
+
+  val tokens = text
+    .toLowerCase
+    .split("\\W+")
+    .filter(_.nonEmpty)
+
+  val wordCounts =
+    tokens.groupBy(identity).view.mapValues(_.size).toMap
+
+  println("Word Frequencies:")
+  wordCounts.toSeq.sortBy(-_._2).foreach {
+    case (word, count) =>
+      println(f"$word%10s -> $count")
+  }
+}
+
+4b
+
+object OneHotEncodingExample extends App {
+val data = List(
+Map("Name"->"Rehan","Color"->"red"),
+Map("Name"->"Prince","Color"->"green"),
+Map("Name"->"Armaan","Color"->"blue"),
+Map("Name"->"Faiz","Color"->"red"),
+Map("Name"->"Meraj","Color"->"green")
+)
+
+val categories = data.map(_("Color")).distinct.sorted
+
+val encodeData = data.map { row=>
+row - "Color" ++ categories.map(cat=> cat->(if (cat == row("Color"))1 else 0)).toMap
+}
+println("categories:"+categories.mkString(","))
+println("\nOne Hot Encoding Data:")
+encodeData.foreach(println)
+}
+
+5a)
+
+def pearsonCorrelation(xs:List[Double],ys:List[Double]): Double = {
+require(xs.length == ys.length,"List must have the same length")
+val meanX = xs.sum / xs.length
+val meanY = ys.sum / ys.length
+val numerator = xs.zip(ys).map { case (x,y) => (x-meanX) * (y-meanY)}.sum
+
+val denominatorX = math.sqrt(xs.map(x=>math.pow(x-meanX,2)).sum)
+val denominatorY = math.sqrt(ys.map(y=>math.pow(y-meanY,2)).sum)
+numerator/(denominatorX* denominatorY)
+}
+
+val list1 = List(1.0,2.0,3.0,4.0,5.0)
+val list2 = List(5.0,4.0,3.0,2.0,1.0)
+
+val correlation = pearsonCorrelation(list1,list2)
+println(f"Pearson correlation coefficient: $correlation%.4f")
+
+5b)
+
+val data = List(1,2,2,3,3,3,2,3,4,7,6)
+
+val freqDist = data.groupBy(identity).mapValues(_.size)
+println("Frequency Distribution:")
+freqDist.toSeq.sortBy(_._1).foreach(println)
+
+val cumFreq = freqDist.toSeq.sortBy(_._1)
+.scanLeft((0,0)){ case((_,cum),(value,freq))=>(value,cum+freq)}
+.tail	
+
+println("\nCumulative Frequency:")
+cumFreq.foreach(println)
+
+5c)
+
+case class Record(id :Int,name:String,score:Double)
+
+val data = List(
+Record(1,"Rehan",88.5),
+Record(2,"Prince",73),
+Record(3,"Meraj",76),
+Record(4,"sunny",75),
+Record(5,"faiz",72)
+Record(6,"apple",72.8)
+
+)
+
+val top5 = data.sortBy(-_.sort).take(5)
+println("Top 5 record by score:")
+top5.foreach(prinltn)
+
+6a)
+
+object MovingAverageExample extends App {
+  val sales = Seq(100.0,120,90,130,150,170,160,180,200,210)
+  println("Original Sales Data:\n" + sales.mkString(","))
+
+  val ma3 = sales.sliding(4).map(_.sum / 4).toSeq
+  println("\n3-Day moving average:\n" + ma3.mkString(","))
+}
+
+6b)
+
+import scala.util.Random
+
+object TimeseriesAnalysis extends App {
+  val sales = Seq.fill(30)(50 + Random.nextInt(100))
+
+  println("Day\tSales")
+  sales.zipWithIndex.foreach { case (s, i) => println(s"${i + 1}\t$s") }
+
+  val ma7 = sales.sliding(7).map(_.sum / 7).toSeq
+  println("\n7-Day moving average:")
+  ma7.indices.foreach(i => println(s"Days${i + 1}-${i + 7}:${ma7(i)}"))
+
+  println("\nBasic Time series Analysis:")
+  println(s"Average sales:${sales.sum / sales.size}")
+  println(s"Max sales:${sales.max}")
+  println(s"Min sales:${sales.min}")
+}
+
+7a)
+
+import breeze.linalg._
+
+object PolynomialExample extends  App { 
+val data = DenseVector(1.0,2.0,3.0)
+val degree = 3
+
+val polyVector = DenseVector(data.toArray.flatMap(x => (1 to degree).map(d=> math.pow(x,d))))
+
+println(s"Original Data:$data")
+println(s"Polynomial feature (degree$degree)$polyVector")
+}
+
+8a)
+!pip install pyspark
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("WordCount").getOrCreate()
+counts = (spark.read.text("/content/input.txt").rdd
+          .flatMap(lambda x: x[0].split())
+          .map(lambda w: (w, 1))
+          .reduceByKey(lambda a, b: a + b))
+
+for w, c in counts.collect():
+    print(f"{w}: {c}")
+
+spark.stop()
+
+8b)
+!pip install pyspark
+from pyspark.sql import SparkSession
+spark=SparkSession.builder.appName("FilterCSV").getOrCreate()
+df=spark.read.csv("/content/rehan-69.csv",header=True,inferSchema=True)
+print("original data:")
+df.show()
+filtered_df=df.filter(df["salary"]>50000)
+print("Filtered Data(salaray>50000):")
+filtered_df.show()
+spark.stop()
+
+
+8c)
+
+!pip install pyspark
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import avg
+spark = SparkSession.builder.appName("GroupByExample").getOrCreate()
+df = spark.read.csv("/content/rehan-69.csv",header=True,inferSchema=True)
+print("Original data:")
+df.show()
+avg_salary_df = df.groupBy("department").agg(avg("salary").alias("avg_salary"))
+print("\nAverage salary per department:")
+avg_salary_df.show()
+spark.stop()
+
+8d)
+
+!pip install pyspark
+from pyspark.sql import SparkSession
+#create spark session
+spark=SparkSession.builder.appName("JoinExample").getOrCreate()
+employees=spark.read.csv("/content/department.csv",header=True,inferSchema=True)
+departments=spark.read.csv("/content/department.csv",header=True,inferSchema=True)
+print("employees:")
+employees.show()
+print("departments:")
+joined_df=employees.join(departments,employees.deptid==departments.deptid,"inner").select("empid","name","deptname")
+print("Joined data:")
+joined_df.show()
+joined_df.write.csv("output_joined.csv",header=True,mode="overwrite")
+spark.stop()
+
